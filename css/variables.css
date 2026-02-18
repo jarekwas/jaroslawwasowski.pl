@@ -1,0 +1,72 @@
+/* ==========================================================================
+   Design System Tokens
+   ========================================================================== */
+
+:root {
+  /* Colors - Backgrounds */
+  --bg-primary: #0A0A0F;
+  --bg-secondary: #12121A;
+  --bg-tertiary: #1A1A2E;
+  --bg-nav: rgba(10, 10, 15, 0.85);
+
+  /* Colors - Text */
+  --text-primary: #E8E8ED;
+  --text-secondary: #8B8B9E;
+  --text-tertiary: #5A5A6E;
+
+  /* Colors - Accents */
+  --accent-indigo: #6C63FF;
+  --accent-teal: #00D4AA;
+  --accent-warm: #FF6B35;
+
+  /* Colors - Borders */
+  --border: #1E1E2E;
+  --border-hover: #2A2A3E;
+
+  /* Gradients */
+  --gradient-primary: linear-gradient(135deg, #6C63FF 0%, #00D4AA 100%);
+  --gradient-warm-glow: 0 4px 24px rgba(255, 107, 53, 0.3);
+  --gradient-card-glow: 0 8px 32px rgba(108, 99, 255, 0.08);
+
+  /* Typography */
+  --font-heading: 'Space Grotesk', system-ui, sans-serif;
+  --font-body: 'Inter', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+
+  /* Font Sizes */
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.25rem;
+  --text-2xl: clamp(1.5rem, 3vw, 2.25rem);
+  --text-3xl: clamp(2rem, 4vw, 3rem);
+  --text-hero: clamp(2.5rem, 5vw, 4rem);
+
+  /* Spacing */
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 32px;
+  --space-2xl: 48px;
+  --space-3xl: 64px;
+  --space-4xl: 96px;
+  --space-5xl: 128px;
+
+  /* Layout */
+  --container-max: 1200px;
+  --container-padding: 24px;
+  --nav-height: 64px;
+
+  /* Borders */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-full: 9999px;
+
+  /* Transitions */
+  --transition-fast: 0.2s ease;
+  --transition-base: 0.3s ease;
+  --transition-smooth: 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
