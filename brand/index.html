@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Brand Kit · Jarosław Wąsowski — AI Architect</title>
+  <meta name="description" content="Brand kit of Jarosław Wąsowski, AI Architect, and the Jak działa AI / AI X-Rayed channels: color palette and typography.">
+  <meta name="author" content="Jarosław Wąsowski">
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#0A0A0A">
+  <meta property="og:site_name" content="Jarosław Wąsowski — AI Architect">
+  <meta property="og:title" content="Brand Kit · Jarosław Wąsowski — AI Architect">
+  <link rel="canonical" href="https://jaroslawwasowski.pl/brand/">
+
+  <!-- Brand kit without a logo: an empty icon keeps the site favicon out of brand imports. -->
+  <link rel="icon" href="data:,">
+
+  <style>
+    /* Fonts: static instances (OFL 1.1) of the brand typefaces. */
+    @font-face {
+      font-family: "Space Grotesk";
+      src: url("fonts/SpaceGrotesk-Bold.ttf") format("truetype");
+      font-weight: 700;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: "Inter";
+      src: url("fonts/Inter-Regular.ttf") format("truetype");
+      font-weight: 400;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: "Inter";
+      src: url("fonts/Inter-Bold.ttf") format("truetype");
+      font-weight: 700;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    /* Brand tokens — source: PersonalPublisher brand/brand_book.md §2 (Base Palette + s01 fallback accents). */
+    :root {
+      --color-primary: #0A0A0A;   /* Void Black — primary background */
+      --color-secondary: #007ACC; /* Electric Blue — brand color */
+      --color-tertiary: #E0E0E0;  /* Ghost White — primary text */
+      --color-accent: #00E5FF;    /* Cyan — highlights */
+      --color-surface: #1E1E1E;   /* Terminal Gray — panels */
+      --color-border: #333333;    /* Charcoal — borders */
+
+      --font-heading: "Space Grotesk", system-ui, sans-serif;
+      --font-body: "Inter", system-ui, sans-serif;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; }
+
+    html, body {
+      margin: 0;
+      background: var(--color-primary);
+      color: var(--color-tertiary);
+      font-family: var(--font-body);
+      font-weight: 400;
+      font-size: 17px;
+      line-height: 1.6;
+    }
+
+    .wrap {
+      max-width: 1040px;
+      margin: 0 auto;
+      padding: 56px 24px 72px;
+    }
+
+    h1, h2, h3 {
+      font-family: var(--font-heading);
+      font-weight: 700;
+      line-height: 1.1;
+      margin: 0;
+    }
+
+    a { color: var(--color-accent); }
+
+    /* Hero panel with HUD corner markers (brand_book.md §4 Icon & UI). */
+    .hero {
+      position: relative;
+      padding: 48px 40px;
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: 4px;
+    }
+    .hero::before, .hero::after {
+      content: "";
+      position: absolute;
+      width: 28px;
+      height: 28px;
+      border-color: var(--color-accent);
+      border-style: solid;
+    }
+    .hero::before { top: -1px; left: -1px; border-width: 2px 0 0 2px; }
+    .hero::after { bottom: -1px; right: -1px; border-width: 0 2px 2px 0; }
+
+    .eyebrow {
+      margin: 0 0 16px;
+      font-family: var(--font-heading);
+      font-size: 14px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--color-accent);
+    }
+    .hero h1 { font-size: clamp(40px, 7vw, 72px); }
+    .lede { margin: 20px 0 8px; font-size: 20px; }
+    .lede strong { font-weight: 700; }
+    .aesthetic { margin: 0; max-width: 640px; }
+
+    .button {
+      display: inline-block;
+      margin-top: 28px;
+      padding: 12px 22px;
+      background: var(--color-accent);
+      color: var(--color-primary);
+      font-family: var(--font-heading);
+      font-weight: 700;
+      text-decoration: none;
+      border-radius: 4px;
+    }
+
+    section { margin-top: 64px; }
+
+    .section-title {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 28px;
+      font-size: 32px;
+    }
+    .section-title::before {
+      content: "";
+      width: 6px;
+      height: 32px;
+      background: var(--color-secondary);
+    }
+
+    /* Colors */
+    .swatches {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 16px;
+      padding: 0;
+      margin: 0;
+      list-style: none;
+    }
+    .swatch {
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: 4px;
+      overflow: hidden;
+    }
+    .chip {
+      height: 112px;
+      border-bottom: 1px solid var(--color-border);
+    }
+    .chip.primary { background: var(--color-primary); }
+    .chip.secondary { background: var(--color-secondary); }
+    .chip.tertiary { background: var(--color-tertiary); }
+    .chip.accent { background: var(--color-accent); }
+    .chip.surface { background: var(--color-surface); }
+    .chip.border { background: var(--color-border); }
+    .swatch-body { padding: 14px 16px 16px; }
+    .swatch-name { display: block; font-weight: 700; }
+    .swatch-hex { display: block; font-variant-numeric: tabular-nums; letter-spacing: 0.04em; }
+    .swatch-role { display: block; margin-top: 6px; font-size: 14px; }
+
+    /* Typography */
+    .specimens { display: grid; gap: 16px; }
+    .specimen {
+      padding: 28px 32px;
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: 4px;
+    }
+    .specimen-label {
+      margin: 0 0 14px;
+      font-size: 14px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--color-accent);
+    }
+    .specimen-heading {
+      font-family: var(--font-heading);
+      font-weight: 700;
+      font-size: clamp(30px, 5vw, 48px);
+      line-height: 1.15;
+      margin: 0;
+    }
+    .specimen-body { margin: 0; max-width: 720px; }
+    .specimen-body + .specimen-body { margin-top: 12px; }
+    .specimen-bold { font-weight: 700; }
+
+    footer {
+      margin-top: 72px;
+      padding-top: 24px;
+      border-top: 1px solid var(--color-border);
+      font-size: 14px;
+    }
+
+    @media (max-width: 600px) {
+      .wrap { padding: 32px 16px 48px; }
+      .hero { padding: 32px 20px; }
+      .specimen { padding: 22px 18px; }
+      .lede { font-size: 18px; }
+    }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+
+    <header class="hero">
+      <p class="eyebrow">Brand Kit</p>
+      <h1>The AI Architect</h1>
+      <p class="lede">Jarosław&nbsp;Wąsowski · <strong>Jak działa&nbsp;AI</strong>&nbsp;(PL) · <strong>AI&nbsp;X-Rayed</strong>&nbsp;(EN)</p>
+      <p class="aesthetic">Deep Tech Blueprint — the precision of technical drawing meets organic neuroscience. Clean, dark, neon accents, glass, metal.</p>
+      <a class="button" href="https://jaroslawwasowski.pl/">jaroslawwasowski.pl</a>
+    </header>
+
+    <section aria-labelledby="colors">
+      <h2 class="section-title" id="colors">Colors</h2>
+      <ul class="swatches">
+        <li class="swatch">
+          <div class="chip primary"></div>
+          <div class="swatch-body">
+            <span class="swatch-name">Void Black</span>
+            <span class="swatch-hex">#0A0A0A</span>
+            <span class="swatch-role">Primary · background</span>
+          </div>
+        </li>
+        <li class="swatch">
+          <div class="chip secondary"></div>
+          <div class="swatch-body">
+            <span class="swatch-name">Electric Blue</span>
+            <span class="swatch-hex">#007ACC</span>
+            <span class="swatch-role">Secondary · brand color</span>
+          </div>
+        </li>
+        <li class="swatch">
+          <div class="chip tertiary"></div>
+          <div class="swatch-body">
+            <span class="swatch-name">Ghost White</span>
+            <span class="swatch-hex">#E0E0E0</span>
+            <span class="swatch-role">Tertiary · text</span>
+          </div>
+        </li>
+        <li class="swatch">
+          <div class="chip accent"></div>
+          <div class="swatch-body">
+            <span class="swatch-name">Cyan</span>
+            <span class="swatch-hex">#00E5FF</span>
+            <span class="swatch-role">Accent · highlights</span>
+          </div>
+        </li>
+        <li class="swatch">
+          <div class="chip surface"></div>
+          <div class="swatch-body">
+            <span class="swatch-name">Terminal Gray</span>
+            <span class="swatch-hex">#1E1E1E</span>
+            <span class="swatch-role">Panels &amp; cards</span>
+          </div>
+        </li>
+        <li class="swatch">
+          <div class="chip border"></div>
+          <div class="swatch-body">
+            <span class="swatch-name">Charcoal</span>
+            <span class="swatch-hex">#333333</span>
+            <span class="swatch-role">Borders</span>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <section aria-labelledby="typography">
+      <h2 class="section-title" id="typography">Typography</h2>
+      <div class="specimens">
+        <div class="specimen">
+          <p class="specimen-label">Headlines · Space Grotesk Bold 700</p>
+          <p class="specimen-heading">Anatomy of a Digital Mind</p>
+          <p class="specimen-heading">Jak działa AI — zażółć gęślą jaźń</p>
+        </div>
+        <div class="specimen">
+          <p class="specimen-label">Body · Inter Regular 400 / Bold 700</p>
+          <p class="specimen-body">Practitioner knowledge from production AI systems — RAG, agents, LLMOps and enterprise architecture, explained from raw math to business applications.</p>
+          <p class="specimen-body">Wiedza praktyka z produkcyjnych systemów AI: od surowej matematyki po zastosowania biznesowe. <span class="specimen-bold">Żadnej teorii „na sucho”.</span></p>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <p>Jarosław Wąsowski · AI Architect · <a href="https://jaroslawwasowski.pl/">jaroslawwasowski.pl</a></p>
+    </footer>
+
+  </main>
+</body>
+</html>
